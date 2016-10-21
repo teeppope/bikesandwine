@@ -9,18 +9,37 @@
 	<link rel="stylesheet" href="screen.css">
 	<!-- Link to jQuery -->
 </head>
-<body>
+<body id="home">
 	<header>
-		<a href="#" class="logo">
+		<a href="#home" class="logo">
 			<img src="assets/grapebike-logo.svg" alt="The Bikes and Wine Logo">
 			<h1>Bikes &amp Wine Inc.</h1>
 		</a>
 		<nav>
+
+			<a href="#openModal" class="btn">
+				<img class="mobile-nav" src="">
+			</a>
+
+			<div id="openModal" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<ul class="modal-nav">
+						<li class="modal-nav-item"><a href="#home">Home</a></li>
+						<li class="modal-nav-item"><a href="#featured">Featured</a></li>
+						<li class="modal-nav-item"><a href="#about">About</a></li>
+						<li class="modal-nav-item"><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+
+
+
 			<ul class="main-nav">
-				<li class="main-nav-item"><a href="#">Home</a></li>
+				<li class="main-nav-item"><a href="#home">Home</a></li>
 				<li class="main-nav-item"><a href="#featured">Featured</a></li>
 				<li class="main-nav-item"><a href="#about">About</a></li>
-				<li class="main-nav-item"><a href="#">Contact</a></li>
+				<li class="main-nav-item"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -29,10 +48,8 @@
 	<main>
 		<section class="hero-img">
 			<h1 class="hero-title">Of Bikes <span class="amper">&amp</span><br>Wine</h1>
-			<p class="hero-sub-title">A simple tale of riding and driking</p>
+			<p class="hero-sub-title">Find the right drink for any ride</p>
 		</section>
-
-		
 
 		<section class="featured" id="featured">
 			<div class="section-title container">
@@ -40,10 +57,10 @@
 				<p>Each Month with pick a featured wine, and pair it with a perfect riding companion to take you to any vista to enjoy the best of life.</p>
 			</div>
 			<article class="two-col container">
-				<div class="feat-wine">
+				<div class="col-one feat-wine">
 					<h1>Featured Wine</h1>
 					<img class="feat-wine-img" src="assets/feat-wine.png" alt="A featured white wine">
-					<div class="feat-info">
+					<div class="col-info">
 						<h2 class="feat-info-title">2014 Pebble Cove Blend</h3>
 						<p>This is an unusual blend of 55% Sauvignon Blanc, 39% Chardonnay and 6% Viognier. Baked pineapple, mango, anise and lemongrass ride along tightly grained texture and a tension of acidity, finding a manageable weight of viscosity on the finish. It will leave you yearning for those sunny days and long bike rides.</p>
 						<p>Beard tumblr salvia, gluten-free shabby chic semiotics glossier synth biodiesel flexitarian prism four loko activated charcoal. Raw denim humblebrag synth, seitan kitsch master cleanse green juice.</p>
@@ -51,10 +68,10 @@
 					<button class="buy-btn">Buy Now!</button>
 				</div>
 
-				<div class="feat-bikes">
+				<div class="col-two feat-bikes">
 					<h1>Featured Bike</h1>
 					<img class="feat-bike-img" src="assets/feat-bike.png" alt="A green vintage bianchi road bike">
-					<div class="feat-info">
+					<div class="col-info">
 						<h2 class="feat-info-title">1978 Bianchi Road Bike</h3>
 						<p>This bike will have you zipping around town from wine store to wine store. It's vintage appeal and bright colour make it a perfect bike for those hot summer months.</p>
 						<p>IPhone edison bulb waistcoat bicycle rights post-ironic banh mi pug chambray asymmetrical coloring book, woke paleo fap. Swag disrupt tilde wayfarers poke, bitters biodiesel semiotics fap next level chartreuse waistcoat pour-over crucifix. Offal godard put a bird on it, raclette lo-fi chartreuse chicharrones slow-carb flexitarian readymade sartorial cornhole chambray.</p>
@@ -65,18 +82,18 @@
 		</section>
 
 		<section class="about" id="about">
+
 			<div class="section-title container">
 				<h1>About Us</h1>
-				<p>Each Month with pick a featured wine, and pair it with a perfect riding companion to take you to any vista to enjoy the best of life.</p>
 			</div>
 			<article class="two-col container">
-				<div class="">
-					<img src="assets/grapebike-logo.svg" alt="The Bikes and Wine Logo">
+				<div class="col-one">
+					<img class="about-logo" src="assets/grapebike-logo.svg" alt="The Bikes and Wine Logo">
 				</div>
 
-				<div>
-					<h1>About Us</h1>
-					<p>This is a testing of the p styles</p>
+				<div class="col-two col-info">
+					<p>We're a simple company, wanting nothing more than to unite pasisonate cyclists with a wine to sastisfy their need for speed and adventure. Starting in the beautiful Okanagan Valley, we've since grown to provide cyclists world wide an excellent wine for every type of adventure.</p>
+					<p>DIY letterpress cold-pressed next level put a bird on it, gentrify mustache umami gluten-free blog synth. Pork belly kombucha waistcoat copper mug yr, snackwave keffiyeh tote bag XOXO craft beer PBR&B. 90's truffaut man braid, sustainable williamsburg narwhal mlkshk la croix.</p>
 				</div>
 			</article>
 		</section>
@@ -84,7 +101,7 @@
 	</main>
 	
 	<footer>
-		<div class="contact"> 
+		<div class="contact" id="contact"> 
 			<div class="info">
 				<h2>Contact Me!</h2>
 				<p class="phone">604-445-4913</p>
