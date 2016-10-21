@@ -7,27 +7,27 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-.container{
+.container {
 	width: 80%;
 	margin: 0 auto;
 }
-img{
+img {
 	width: 7.5rem;
 }
-footer{
+footer {
 	display: flex;
 	flex-direction: row;
 	justify-content:center;
 }
 /*********** BASE TYPOGRAPHY STYLES ************/
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
 	font-family: 'Merriweather', serif;
 }
-h1{
+h1 {
 	font-size: 2.4rem;
 	font-weight: 300;
 }
-h2{
+h2 {
 	font-size: 2rem;
 }
 
@@ -37,20 +37,19 @@ p, a, button {
 	font-weight: 300;
 	line-height: 1.5;
 }
-a{
+a {
 	text-decoration: none;
 	color: grey;
 }
-button{
+button {
 	border: none;
 	padding: 1rem 2rem;
 }
-/* PURPLE COLOR: #4a0b7c   REMOVE WHEN DONE*/
 
 /************ Setting display flex's *************/
 header, 
-.logo, 
-.main-nav,
+.logo,
+.modal-nav, 
 .hero-img,
 .two-col,
 .contact,
@@ -59,44 +58,70 @@ header,
 }
 
 /********* Header Styles *********/
-.hdr-pusher{
+.hdr-pusher {
 	height: 9.5rem;
 }
-header{
+header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
 	box-shadow: 0rem .2rem .3rem grey;
 	width: 100%;
-	opacity: 0.85;
 	background-color: white;
 	position: fixed;
-	z-index: 99999;
+	z-index: 9999;
 }
-.logo h1{
+.logo h1 {
 	color:#4a0b7c;
 }
-.logo{
+.logo {
 	align-items: center;
 }
-nav{
-	flex-basis: 40%;
+/* Mobile Modal Styles */
+.modal-btn {
+	cursor: pointer;
 }
-.main-nav{
-	justify-content: space-around;
+.mobile-nav {
+	width: 5rem;
 }
-.main-nav-item a{
-	border-bottom: 0rem solid gold;
-	transition: border-bottom, 0.2s, linear;
+.modal-dialog {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99999;
+	opacity: 0;
+	background-color: rgba(255,255,255, .7);
+	transition: opacity 0.2s ease-out;
+	pointer-events: none;
 }
-.main-nav-item a:hover{
-	color: #4a0b7c;
-	border-bottom: 0.5rem solid gold;
+.modal-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-color: gold;
+	height: auto;
+	padding: 15rem;
+	border-radius: 1rem;
 }
-
+.modal-dialog:target {
+	opacity: 1;
+	pointer-events: auto;
+}
+.main-nav {
+	display: none;
+}
 
 /********* Hero Image Styles **********/
-.hero-img{
+.hero-img {
 	position: relative;
 	flex-direction: column;
 	justify-content: center;
@@ -104,8 +129,8 @@ nav{
 	color: white;
 	height: 100vh;
 	background: 
-	linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.8)),
-	url(assets/hero-img.jpg);
+		linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.8)),
+		url(assets/hero-img.jpg);
 	background-repeat: no-repeat, no-repeat;
 	background-size: cover, cover;
 	background-attachment: fixed;
@@ -123,27 +148,13 @@ nav{
 .hero-sub-title {
 	font-size: 2rem;
 }
+
 /***************** 2 Column Styles **************/
 /* Featured Section */
-.two-col{
+.two-col {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;	
-}
-/**** Features Seciton ****/
-.featured, .about{
-	padding: 6rem 0;
-	text-align: center;
-}
-.section-title{
-	padding-bottom: 2rem;
-	border-bottom: .1rem solid #4a0b7c;
-	margin-bottom: 6rem;
-}
-.section-title h1{
-	font-size: 6rem;
-	margin-bottom: 2rem;
-	color: #4a0b7c;
 }
 .col-one,
 .col-two {
@@ -151,46 +162,62 @@ nav{
 	margin-bottom: 4rem;
 	padding: 0 3rem;
 }
-.feat-wine-img{
+.col-info p {
+	margin-bottom: 1.2rem;
+}
+/**** Features Seciton ****/
+.featured, 
+.about {
+	padding: 6rem 0;
+	text-align: center;
+}
+.section-title {
+	padding-bottom: 2rem;
+	border-bottom: .1rem solid #4a0b7c;
+	margin-bottom: 6rem;
+}
+.section-title h1 {
+	font-size: 6rem;
+	margin-bottom: 2rem;
+	color: #4a0b7c;
+}
+.feat-wine-img {
 	height: 30rem;
 	width: auto;
 }
-.feat-bike-img{
+.feat-bike-img {
 	width: 90%;
 }
-.feat-info-title{
+.feat-info-title {
 	margin-bottom: 1.5rem;
 }
-.col-info p{
-	margin-bottom: 1.2rem;
-}
-.buy-btn{
+.buy-btn {
 	background-color: gold;
 	margin: 3rem 0;
 	cursor: pointer;
 	box-shadow: 0rem .3rem rgb(200,200,200);
 }
-.buy-btn:hover{
+.buy-btn:hover {
 	background-color: rgb(216,182,0);
 }
 
 /* About Section */
-.about .section-title{
+.about .section-title {
 	border: none;
 	margin-bottom: 0;
 }
-.about{
+.about {
 	background: rgb(225,225,225);
 	background-size: cover;
 	box-shadow: inset 0rem .1rem 1rem rgb(150,150,150);
 	margin-bottom: 1.4rem;
 }
-.about-logo{
+.about-logo {
 	width: 30%;
 }
 
 /* Footer Styles */
-.contact{
+.contact {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -209,7 +236,7 @@ nav{
 	color: white;
 	text-align: center;
 }
-.info h2{
+.info h2 {
 	text-transform: uppercase;
 	font-weight: 300;
 	padding-bottom: 1rem;
@@ -219,7 +246,7 @@ nav{
 .email {
 	padding: .5rem 0;
 }
-.scl-media img{
+.scl-media img {
 	width: 5rem;
 }
 .github,
@@ -230,7 +257,7 @@ nav{
 }
 .github:hover,
 .linkedin:hover,
-.twitter:hover{
+.twitter:hover {
 	opacity: 0.5;
 	/*transform: rotateX(-360deg);*/
 }
@@ -240,23 +267,43 @@ nav{
 
 /* Tablet Media Queries */
 @media (min-width: 40rem) {
+	/* Header Styles */
+	/*Hide modal*/
+	.modal-btn,
+	.modal-nav{
+		display: none;
+	}
+	/*Style main nav*/
+	nav {
+		flex-basis: 40%;
+	}
+	.main-nav {
+		display: flex;
+		justify-content: space-around;
+	}
+	.main-nav-item a {
+		border-bottom: 0rem solid gold;
+		transition: border-bottom, 0.2s, linear;
+	}
+	.main-nav-item a:hover { 
+		color: #4a0b7c;
+		border-bottom: 0.5rem solid gold;
+	}
+
 	/***************** 2 Column Queries **************/
 	/* Featured Section */
-	.feat-bike-img{
+	.feat-bike-img {
 		width: 35rem;
 	}
 
-	/* About Section */
-
-
 	/**** Footer Queries ****/
-	.contact{
+	.contact {
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 6rem 8rem;
 	}
 	.info,
-	.ftr-logo{
+	.ftr-logo {
 		margin-bottom: 0;
 	}
 
@@ -265,11 +312,11 @@ nav{
 @media (min-width: 70rem) {
 	/***************** 2 Column Queries **************/
 	/* Featured Section */
-	.two-col{
+	.two-col {
 		flex-direction: row;
 
 	}
-	.col-info{
+	.col-info {
 		text-align: left;
 	}
 	.feat-wine,
@@ -277,11 +324,11 @@ nav{
 		flex-basis: 50%;
 		width: 50%;
 	}
-	.feat-bike-img{
+	.feat-bike-img{ 
 		width: 35rem;
 	}
 	/* About Section */
-	.about-logo{
+	.about-logo {
 		width: 50%;
 	}
 
