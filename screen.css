@@ -31,16 +31,20 @@ h2{
 	font-size: 2rem;
 }
 
-p, a {
+p, a, button {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 300;
+	line-height: 1.5;
 }
 a{
 	text-decoration: none;
 	color: grey;
 }
-
+button{
+	border: none;
+	padding: 1rem 2rem;
+}
 /* PURPLE COLOR: #4a0b7c   REMOVE WHEN DONE*/
 
 /************ Setting display flex's *************/
@@ -48,6 +52,7 @@ header,
 .logo, 
 .main-nav,
 .hero-img,
+.two-col,
 .contact,
 .scl-media {
 	display: flex;
@@ -61,7 +66,7 @@ header{
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
-	box-shadow: 10px 2px 3px grey;
+	box-shadow: 0rem .2rem .3rem grey;
 	width: 100%;
 	opacity: 0.85;
 	background-color: white;
@@ -118,7 +123,59 @@ nav{
 .hero-sub-title {
 	font-size: 2rem;
 }
-/* 2 Column Styles */
+/***************** 2 Column Styles **************/
+/* Featured Section */
+.two-col{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;	
+}
+/**** Features Seciton ****/
+.featured{
+	padding: 6rem 0;
+	text-align: center;
+}
+.section-title{
+	padding-bottom: 2rem;
+	border-bottom: .1rem solid #4a0b7c;
+	margin-bottom: 6rem;
+}
+.section-title h1{
+	font-size: 6rem;
+	margin-bottom: 2rem;
+	color: #4a0b7c;
+}
+.feat-wine,
+.feat-bikes {
+	width: 100%;
+	margin-bottom: 4rem;
+	padding: 0 3rem;
+}
+.feat-wine-img{
+	height: 30rem;
+	width: auto;
+}
+.feat-bike-img{
+	width: 90%;
+}
+.feat-info-title{
+	margin-bottom: 1.5rem;
+}
+.feat-info p{
+	margin-bottom: 1.2rem;
+}
+.buy-btn{
+	background-color: gold;
+	margin: 3rem 0;
+	cursor: pointer;
+	box-shadow: 0rem .3rem rgb(200,200,200);
+}
+.buy-btn:hover{
+	background-color: rgb(216,182,0);
+}
+
+/* About Section */
+
 
 /* Footer Styles */
 .contact{
@@ -143,7 +200,7 @@ nav{
 	text-transform: uppercase;
 	font-weight: 300;
 	padding-bottom: 1rem;
-	
+
 }
 .phone,
 .email {
@@ -170,6 +227,14 @@ nav{
 
 /* Tablet Media Queries */
 @media (min-width: 40rem) {
+	/***************** 2 Column Queries **************/
+	/* Featured Section */
+	.feat-bike-img{
+		width: 35rem;
+	}
+
+	/* About Section */
+
 
 	/**** Footer Queries ****/
 	.contact{
@@ -185,6 +250,22 @@ nav{
 }
 /* Desktop Media Queries*/
 @media (min-width: 70rem) {
+	/***************** 2 Column Queries **************/
+	/* Featured Section */
+	.two-col{
+		flex-direction: row;
 
+	}
+	.feat-info{
+		text-align: left;
+	}
+	.feat-wine,
+	.feat-bikes {
+		flex-basis: 50%;
+		width: 50%;
+	}
+	.feat-bike-img{
+		width: 35rem;
+	}
 
 }
