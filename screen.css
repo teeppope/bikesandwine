@@ -65,7 +65,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem;
-	box-shadow: 0rem .2rem .3rem grey;
+	box-shadow: 0rem .2rem .3rem rgb(200,200,200);
 	width: 100%;
 	background-color: white;
 	position: fixed;
@@ -149,8 +149,7 @@ header {
 	font-size: 2rem;
 }
 
-/***************** 2 Column Styles **************/
-/* Featured Section */
+/**** 2 Column Styles ****/
 .two-col {
 	flex-direction: column;
 	align-items: center;
@@ -165,12 +164,6 @@ header {
 .col-info p {
 	margin-bottom: 1.2rem;
 }
-/**** Features Seciton ****/
-.featured, 
-.about {
-	padding: 6rem 0;
-	text-align: center;
-}
 .section-title {
 	padding-bottom: 2rem;
 	border-bottom: .1rem solid #4a0b7c;
@@ -180,6 +173,13 @@ header {
 	font-size: 6rem;
 	margin-bottom: 2rem;
 	color: #4a0b7c;
+}
+
+/**** Features Seciton ****/
+.featured, 
+.about {
+	padding: 6rem 0;
+	text-align: center;
 }
 .feat-wine-img {
 	height: 30rem;
@@ -257,7 +257,6 @@ header {
 .linkedin:hover,
 .twitter:hover {
 	opacity: 0.5;
-	/*transform: rotateX(-360deg);*/
 }
 
 
@@ -288,7 +287,7 @@ header {
 		border-bottom: 0.5rem solid gold;
 	}
 
-	/***************** 2 Column Queries **************/
+	/**** 2 Column Queries ***/
 	/* Featured Section */
 	.feat-bike-img {
 		width: 35rem;
@@ -306,9 +305,9 @@ header {
 	}
 
 }
-/* Desktop Media Queries*/
+/* Desktop Media Queries */
 @media (min-width: 70rem) {
-	/***************** 2 Column Queries **************/
+	/**** 2 Column Queries ****/
 	/* Featured Section */
 	.two-col {
 		flex-direction: row;
