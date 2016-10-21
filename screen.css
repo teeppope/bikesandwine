@@ -42,7 +42,8 @@ a{
 /*Setting display flex's*/
 header, 
 .logo, 
-.main-nav {
+.main-nav,
+.hero-img {
 	display: flex;
 }
 
@@ -84,9 +85,10 @@ nav{
 
 /* Hero Image Styles */
 .hero-img{
-	display: flex;
+	position: relative;
+	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	padding: 0 15%;
 	color: white;
 	height: 100vh;
 	background: 
@@ -96,13 +98,18 @@ nav{
 	background-size: cover, cover;
 	background-attachment: fixed;
 }
-.hero-img h1{
+.hero-title {
 	font-size: 8rem;
 	text-transform: uppercase;
+	padding: 0 0 4rem 0;
 }
-.amper{
+.amper {
 	font-size: 12rem;
+	font-weight: 700;
 	position: relative;
+}
+.hero-sub-title {
+	font-size: 2rem;
 }
 /* 2 Column Styles */
 
