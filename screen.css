@@ -1,0 +1,44 @@
+/* ELEMENT STYLES */
+html {
+	/*Set at 62.5% so I can use rem's at a base 10 value*/
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body{
+	width: 80%;
+	margin: 0 auto;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+section{
+	text-align: center;
+}
+
+/*BASE TYPOGRAPHY STYLES*/
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Merriweather', serif;
+}
+h1{
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+
+
+/* MEDIA QUERIES */
+@media (min-width: 40rem) {
+	main {
+		flex-direction: row;
+	}
+
+}
