@@ -1,4 +1,4 @@
-/* ELEMENT STYLES */
+/*********** ELEMENT STYLES **************/
 html {
 	/*Set at 62.5% so I can use rem's at a base 10 value*/
 	font-size: 62.5%;
@@ -19,7 +19,7 @@ footer{
 	flex-direction: row;
 	justify-content:center;
 }
-/*BASE TYPOGRAPHY STYLES*/
+/*********** BASE TYPOGRAPHY STYLES ************/
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Merriweather', serif;
 }
@@ -27,6 +27,10 @@ h1{
 	font-size: 2.4rem;
 	font-weight: 300;
 }
+h2{
+	font-size: 2rem;
+}
+
 p, a {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
@@ -39,15 +43,17 @@ a{
 
 /* PURPLE COLOR: #4a0b7c   REMOVE WHEN DONE*/
 
-/*Setting display flex's*/
+/************ Setting display flex's *************/
 header, 
 .logo, 
 .main-nav,
-.hero-img {
+.hero-img,
+.contact,
+.scl-media {
 	display: flex;
 }
 
-/* Header Styles */
+/********* Header Styles *********/
 .hdr-pusher{
 	height: 9.5rem;
 }
@@ -79,11 +85,12 @@ nav{
 	transition: border-bottom, 0.2s, linear;
 }
 .main-nav-item a:hover{
+	color: #4a0b7c;
 	border-bottom: 0.5rem solid gold;
 }
 
 
-/* Hero Image Styles */
+/********* Hero Image Styles **********/
 .hero-img{
 	position: relative;
 	flex-direction: column;
@@ -114,13 +121,66 @@ nav{
 /* 2 Column Styles */
 
 /* Footer Styles */
+.contact{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 6rem;
+	background: linear-gradient(to bottom, rgba(25,25,25, 0.6), rgba(25,25,25, 0.8)),
+	#4a0b7c; 
+}
+.info,
+.ftr-logo {
+	margin-bottom: 3rem;
+}
+
+.info {
+	color: white;
+	text-align: center;
+}
+.info h2{
+	text-transform: uppercase;
+	font-weight: 300;
+	padding-bottom: 1rem;
+	
+}
+.phone,
+.email {
+	padding: .5rem 0;
+}
+.scl-media img{
+	width: 5rem;
+}
+.github,
+.linkedin,
+.twitter {
+	margin: 0 1rem;
+	transition: opacity 1s;
+}
+.github:hover,
+.linkedin:hover,
+.twitter:hover{
+	opacity: 0.5;
+	/*transform: rotateX(-360deg);*/
+}
 
 
-/* MEDIA QUERIES */
+/*************** MEDIA QUERIES *******************/
 
 /* Tablet Media Queries */
 @media (min-width: 40rem) {
-	
+
+	/**** Footer Queries ****/
+	.contact{
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 6rem 8rem;
+	}
+	.info,
+	.ftr-logo{
+		margin-bottom: 0;
+	}
 
 }
 /* Desktop Media Queries*/
