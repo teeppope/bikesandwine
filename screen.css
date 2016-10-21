@@ -7,19 +7,18 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-body{
+.container{
 	width: 80%;
 	margin: 0 auto;
 }
-main {
+img{
+	width: 7.5rem;
+}
+footer{
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	flex-direction: row;
+	justify-content:center;
 }
-section{
-	text-align: center;
-}
-
 /*BASE TYPOGRAPHY STYLES*/
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Merriweather', serif;
@@ -28,17 +27,97 @@ h1{
 	font-size: 2.4rem;
 	font-weight: 300;
 }
-p {
+p, a {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 300;
 }
+a{
+	text-decoration: none;
+	color: grey;
+}
+
+/* PURPLE COLOR: #4a0b7c   REMOVE WHEN DONE*/
+
+/*Setting display flex's*/
+header, 
+.logo, 
+.main-nav {
+	display: flex;
+}
+
+/* Header Styles */
+.hdr-pusher{
+	height: 9.5rem;
+}
+header{
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	box-shadow: 10px 2px 3px grey;
+	width: 100%;
+	opacity: 0.85;
+	background-color: white;
+	position: fixed;
+	z-index: 99999;
+}
+.logo h1{
+	color:#4a0b7c;
+}
+.logo{
+	align-items: center;
+}
+nav{
+	flex-basis: 40%;
+}
+.main-nav{
+	justify-content: space-around;
+}
+.main-nav-item a{
+	border-bottom: 0rem solid gold;
+	transition: border-bottom, 0.2s, linear;
+}
+.main-nav-item a:hover{
+	border-bottom: 0.5rem solid gold;
+}
+
+
+/* Hero Image Styles */
+.hero-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 100vh;
+	background: 
+	linear-gradient(to bottom, rgba(0,0,0, 0.4), rgba(0,0,0, 0.8)),
+	url(assets/hero-img.jpg);
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	background-attachment: fixed;
+}
+.hero-img h1{
+	font-size: 8rem;
+	text-transform: uppercase;
+}
+.amper{
+	font-size: 12rem;
+	position: relative;
+}
+/* 2 Column Styles */
+
+/* Footer Styles */
 
 
 /* MEDIA QUERIES */
+
+/* Tablet Media Queries */
 @media (min-width: 40rem) {
-	main {
-		flex-direction: row;
-	}
+	
+
+}
+/* Desktop Media Queries*/
+@media (min-width: 70rem) {
+
 
 }
