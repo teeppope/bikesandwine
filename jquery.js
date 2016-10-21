@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	
+	$('.about').css("background-color","rgb(225,225,225)");
 
 	$('a[href^="#"]').on('click',function (e) {
 		e.preventDefault();

@@ -207,8 +207,6 @@ header {
 	margin-bottom: 0;
 }
 .about {
-	background: rgb(225,225,225);
-	background-size: cover;
 	box-shadow: inset 0rem .1rem 1rem rgb(150,150,150);
 	margin-bottom: 1.4rem;
 }
